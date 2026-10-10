@@ -49,7 +49,9 @@ Azure Storage Account (LRS, South Africa North)
 
 Created a Standard, locally redundant storage account in `rg-portfolio` with Blob Storage as the primary service, then three private containers to separate data by type. Separating documents, database exports and application files makes a restore under pressure much faster, because you know where to look.
 
-![Storage account review](screenshots/p2-02-storage-account.png)
+![Storage account review]
+<img width="1362" height="689" alt="Screenshot 2026-10-08 191938" src="https://github.com/user-attachments/assets/0e570a95-14ca-4f65-9243-27fd1e1bb345" />
+
 ![Containers list]
 <img width="1365" height="646" alt="Screenshot 2026-10-08 192928" src="https://github.com/user-attachments/assets/1b8c12bf-b38f-439b-a619-29123701f409" />
 
@@ -62,8 +64,11 @@ Enabled **versioning for blobs** under Data protection, keeping all versions.
 
 To test it, I uploaded `report.txt`, overwrote it with different content, and confirmed two versions appeared. I then restored the older one using **Make current version**. Restoring does not rewind the file; it copies the old version forward as a new one, so the history ended with **three versions** and the current content matching the original.
 
-![Versioning enabled](screenshots/p2-05-versioning-enabled.png)
-![Two versions listed](screenshots/p2-06-two-versions.png)
+![Versioning enabled]
+<img width="1365" height="657" alt="Screenshot 2026-10-08 194404" src="https://github.com/user-attachments/assets/27ec5ce4-160c-4c67-bf3d-115645c2f447" />
+
+![Two versions listed]<img width="1365" height="646" alt="Screenshot 2026-10-08 195414" src="https://github.com/user-attachments/assets/f11adb79-f241-4697-a9da-c1bfcc5eca7e" />
+
 ![After restore: three versions](screenshots/p2-07-restored-versions.png)
 
 ### 3. Lifecycle management
