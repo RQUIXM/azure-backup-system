@@ -1,7 +1,8 @@
 # azure-backup-system
 An automated backup setup on Azure Blob Storage with file versioning, lifecycle-based cost tiering, and a scheduled workflow that emails a confirmation of what is protected.
 
-![Backup confirmation email](<img width="1365" height="641" alt="Screenshot 2026-10-08 213732" src="https://github.com/user-attachments/assets/fda767da-e23e-452e-8dc6-826f3377dd88" />)
+![Backup confirmation email]
+<img width="1365" height="641" alt="Screenshot 2026-10-08 213732" src="https://github.com/user-attachments/assets/fda767da-e23e-452e-8dc6-826f3377dd88" />
 
 
 ## The problem
@@ -49,8 +50,9 @@ Azure Storage Account (LRS, South Africa North)
 Created a Standard, locally redundant storage account in `rg-portfolio` with Blob Storage as the primary service, then three private containers to separate data by type. Separating documents, database exports and application files makes a restore under pressure much faster, because you know where to look.
 
 ![Storage account review](screenshots/p2-02-storage-account.png)
-![Containers list](<img width="1365" height="646" alt="Screenshot 2026-10-08 192928" src="https://github.com/user-attachments/assets/1b8c12bf-b38f-439b-a619-29123701f409" />
-)
+![Containers list]
+<img width="1365" height="646" alt="Screenshot 2026-10-08 192928" src="https://github.com/user-attachments/assets/1b8c12bf-b38f-439b-a619-29123701f409" />
+
 
 I uploaded a few harmless sample files into each container so there was something to protect.
 
