@@ -67,15 +67,18 @@ To test it, I uploaded `report.txt`, overwrote it with different content, and co
 ![Versioning enabled]
 <img width="1365" height="657" alt="Screenshot 2026-10-08 194404" src="https://github.com/user-attachments/assets/27ec5ce4-160c-4c67-bf3d-115645c2f447" />
 
-![Two versions listed]<img width="1365" height="646" alt="Screenshot 2026-10-08 195414" src="https://github.com/user-attachments/assets/f11adb79-f241-4697-a9da-c1bfcc5eca7e" />
+![Two versions listed]
+<img width="1365" height="646" alt="Screenshot 2026-10-08 195414" src="https://github.com/user-attachments/assets/f11adb79-f241-4697-a9da-c1bfcc5eca7e" />
 
-![After restore: three versions](screenshots/p2-07-restored-versions.png)
+![After restore: three versions]
+<img width="1365" height="651" alt="Screenshot 2026-10-08 215531" src="https://github.com/user-attachments/assets/61ce1427-73b8-4ed6-a8b6-d2cba9b3b2e0" />
 
 ### 3. Lifecycle management
 
 Added a rule, `archive-old-files`, that moves blobs to **Cool** storage after 30 days without modification and to **Archive** after 90 days. The data stays safe and retrievable while the cost per GB drops over time. Nothing moves yet because the files are new; the configuration is the deliverable.
 
-![Lifecycle rule](screenshots/p2-08-lifecycle-rule.png)
+![Lifecycle rule]
+<img width="1365" height="654" alt="Screenshot 2026-10-08 200030" src="https://github.com/user-attachments/assets/f2d07383-9b90-4f1f-b9d8-01c90edd48f6" />
 
 ### 4. Daily confirmation workflow
 
@@ -91,8 +94,12 @@ length(body('Lists_blobs_(V2)')?['value'])
 
 Ran it manually to test. Both runs succeeded, and the email arrived reading **"Files currently protected in documents: 4"**.
 
-![Logic App designer](screenshots/p2-10-logic-app-designer.png)
-![Run history: succeeded](screenshots/p2-11-run-history.png)
+![Logic App designer]
+<img width="1365" height="630" alt="Screenshot 2026-10-08 213638" src="https://github.com/user-attachments/assets/c1d512b8-a738-4f81-b59e-99c26071f5c9" />
+
+![Run history: succeeded]
+<img width="1365" height="650" alt="Screenshot 2026-10-08 213545" src="https://github.com/user-attachments/assets/5be31d47-35b8-4459-9118-55d3516243db" />
+
 
 ## Results
 
@@ -139,28 +146,9 @@ Ran it manually to test. Both runs succeeded, and the email arrived reading **"F
 - Everything in one resource group, deleted after testing
 - Confirmed afterwards in Cost analysis: actual cost under US$0.01 for the month against a US$20 budget
 
-![Cost analysis after teardown](screenshots/p2-12-cost-analysis.png)
+![Cost analysis after teardown]
+<img width="1365" height="697" alt="Screenshot 2026-10-10 125313" src="https://github.com/user-attachments/assets/7abd29c5-8f9b-4112-bdc6-605f48b5ed07" />
 
 ## Skills demonstrated
 
 Azure Blob Storage, blob versioning and recovery, storage lifecycle management, access tiers (Hot, Cool, Archive), Azure Logic Apps, workflow automation, connector configuration, Azure Cost Management, troubleshooting, technical documentation.
-
-## Repository layout
-
-```
-.
-├── README.md
-└── screenshots/
-    ├── p2-02-storage-account.png
-    ├── p2-03-containers.png
-    ├── p2-05-versioning-enabled.png
-    ├── p2-06-two-versions.png
-    ├── p2-07-restored-versions.png
-    ├── p2-08-lifecycle-rule.png
-    ├── p2-09-confirmation-email.png
-    ├── p2-10-logic-app-designer.png
-    ├── p2-11-run-history.png
-    └── p2-12-cost-analysis.png
-```
-
-*Note: the access key and subscription ID were removed or cropped from all screenshots. No real or sensitive data was stored in this environment.*
