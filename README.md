@@ -71,7 +71,8 @@ To test it, I uploaded `report.txt`, overwrote it with different content, and co
 <img width="1365" height="646" alt="Screenshot 2026-10-08 195414" src="https://github.com/user-attachments/assets/f11adb79-f241-4697-a9da-c1bfcc5eca7e" />
 
 ![After restore: three versions]
-<img width="1365" height="651" alt="Screenshot 2026-10-08 215531" src="https://github.com/user-attachments/assets/61ce1427-73b8-4ed6-a8b6-d2cba9b3b2e0" />
+<img width="1124" height="604" alt="Screenshot 2026-10-08 215522" src="https://github.com/user-attachments/assets/1b0c50ed-85a3-4dda-8981-7aca014e1e65" />
+
 
 ### 3. Lifecycle management
 
@@ -119,6 +120,7 @@ Ran it manually to test. Both runs succeeded, and the email arrived reading **"F
 **Almost created the wrong "container" resource.** Searching for "container" in the portal surfaces Container Instances, which is a compute service that runs apps and can cost money. The containers this project needs live *inside* the storage account, under Data storage. Worth knowing because the names are easy to confuse.
 
 **Workflow validation failed on the email step.** The expression referenced `List_blobs_(V2)`, but the action is actually named `Lists blobs (V2)`. Logic App expressions refer to actions by their exact name with spaces replaced by underscores, so one missing letter broke validation. Correcting the name in the formula fixed it.
+<img width="874" height="639" alt="Screenshot 2026-10-08 213044" src="https://github.com/user-attachments/assets/0fddf7d1-2ead-4b81-bd82-e99bc70ccdaa" />
 
 **The connection form would not submit.** The "Create new" button stayed greyed out because the storage account name field was empty. Required fields on connector forms do not always flag themselves clearly.
 
@@ -148,6 +150,10 @@ Ran it manually to test. Both runs succeeded, and the email arrived reading **"F
 
 ![Cost analysis after teardown]
 <img width="1365" height="697" alt="Screenshot 2026-10-10 125313" src="https://github.com/user-attachments/assets/7abd29c5-8f9b-4112-bdc6-605f48b5ed07" />
+
+<img width="470" height="578" alt="Screenshot 2026-10-08 220350" src="https://github.com/user-attachments/assets/ba8bf9e5-6718-46e3-b14d-ddc89bfde043" />
+
+<img width="1365" height="655" alt="Screenshot 2026-10-09 095420" src="https://github.com/user-attachments/assets/a8e35eec-277d-49d9-8849-2bf11d734d15" />
 
 ## Skills demonstrated
 
